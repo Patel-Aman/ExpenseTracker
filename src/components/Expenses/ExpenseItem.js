@@ -3,6 +3,7 @@ import ExpenseDate from './ExpenseDate'
 import './ExpenseItem.css'
 
 function ExpenseItem(props) {
+
   return (
     <Card className="expense-item">
       <div>
