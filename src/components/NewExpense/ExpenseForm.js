@@ -38,11 +38,11 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     }
 
-    setEnteredAmount('');
-    setEnteredDate('');
-    setEnteredTitle('');
+    setEnteredAmount('')
+    setEnteredDate('')
+    setEnteredTitle('')
 
-    props.onSaveExpenseData(expenseData);
+    props.onSaveExpenseData(expenseData)
   }
 
   return (
@@ -61,8 +61,8 @@ const ExpenseForm = (props) => {
           <input
             type="number"
             value={enteredAmount}
-            min="0.01"
-            step="0.01"
+            min="1"
+            step="1"
             onChange={amountChangeHandler}
           />
         </div>
@@ -76,7 +76,10 @@ const ExpenseForm = (props) => {
           />
         </div>
       </div>
-      <div className="new_expense__actions">
+      <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
